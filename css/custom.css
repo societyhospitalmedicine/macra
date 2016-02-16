@@ -54,7 +54,7 @@ section:nth-child(even){
 }
 
 footer{
-    background-color:#240606;
+    background-color:#059f9d;
     color:white;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -91,3 +91,10 @@ p.custom-section{
 /*#resources div.section-body > p:first-child > strong{*/
 /*    font-size:11px;*/
 /*}*/
+/* 
+MACRA CUSTOM
+*/
+/* navigation bar *//* color nav bar blue */
+ul.navbar-right li a.page-scroll{ 
+    color: #76FAF5;
+}
