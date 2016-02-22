@@ -240,27 +240,27 @@ header .intro-text .intro-lead-in {
     line-height: 22px;
     margin-bottom: 25px
 }
-/*header .intro-text .intro-heading {*/
+header .intro-text .intro-heading {
 
-   /*  font-family: DCC-ASH;*//*,Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-/*    text-transform: uppercase;*/
-/*    font-weight: 700;*/
-/*    font-size: 35px;*/
-/*    line-height: 35px;*/
-    /*margin-bottom: 50px*/
-/*    background-color:white;*/
-/*    color:black;*/
-/*    padding:10px 0px;*/
-/*    width:95%;*/
+     font-family: DCC-ASH,Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 50px
+    background-color:white;
+    color:black;
+    padding:10px 0px;
+    width:95%;
     
-/*}*/
+}
 @media (min-width: 768px) {
     header .intro-text {
         padding-top: 300px;
         padding-bottom: 200px
     }
     header .intro-text .intro-lead-in {
-        font-family: DCC-ASH; /*"Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+        font-family: DCC-ASH; "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic;
         font-size: 40px;
         line-height: 40px;
@@ -268,7 +268,7 @@ header .intro-text .intro-lead-in {
        
     }
     header .intro-text .intro-heading {
-        font-family: DCC-ASH;/*,Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+        font-family: DCC-ASH,Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
         text-transform: uppercase;
         font-weight: 700;
         font-size: 35px;
