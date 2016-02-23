@@ -98,3 +98,46 @@ MACRA CUSTOM
 ul.navbar-right li a.page-scroll{ 
     color: #76FAF5;
 }
+/* MODAL STYLE */
+
+.modal .modal-title {
+    /*background: #059f9d; */
+    color: #059f9d; 
+    text-align:center;
+}
+
+.modal button.btn-default{
+    background: #059f9d;
+    margin:0 auto;
+    margin: 0px 50% 0px 45%;
+    color:white;
+}
+.modal-header, .modal-footer, .modal-body{
+    padding:30px;
+}
+
+/* 
+section list 
+*/
+
+ul.section-list li {
+    margin:15px 0 15px 0px;
+    list-style: none;
+}
+ul.section-list li:before {
+  /* For a round bullet */
+  content: '\2022';
+  /* For a square bullet */
+  /*content:'\25A0';*/
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -10px;
+  bottom: 10px;
+  color: #059f9d;
+  font-size: 30px;
+}
+ul.section-list li span{
+    padding-left:10px;
+}

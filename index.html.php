@@ -61,11 +61,21 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <!-- PHP Modal rendering -->
+    <?php //file_get_contents('./modals/medicare_chip.html')); 
+            $dir = "./modals/";
+            // Sort in ascending order - this is default
+            $a = scandir($dir);
 
+            foreach ($a as &$value) {
+               // $value = $value * 2;
+               //echo($dir.$value);
+                echo(file_get_contents($dir.$value)); 
+            }
+    ?>
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -90,12 +100,11 @@
                     <li>
                         <a class="page-scroll" href="#basics">Macra Basics</a>
                     </li>
-                   
                     <li>
                         <a class="page-scroll" href="#risk">what's at risk?</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#mips">mips</a>
+                        <a class="page-scroll" href="#mymips">mips</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#payment">alternative payment models</a>
@@ -103,12 +112,6 @@
                     <li>
                         <a class="page-scroll" href="#cases">what can i do?</a>
                     </li>
-                    <!--<li>-->
-                    <!--    <a class="page-scroll" href="#events">events</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--    <a class="page-scroll" href="#contact">Contact</a>-->
-                    <!--</li>-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -134,17 +137,17 @@
             <div class="row">
                 <div class="col-lg-12 text-center section-body">
                     <h2 class="section-heading">macra basics</h2>
-                     <h3 class="section-subheading text-muted">The <a> Medicare Access and CHIP Reauthorization ACT (MACRA)</a>, signed into law in April 2015, 
-                     repealed the <a>Sustainable Growth Rate (SGR)</a> and instituted significant reforms to the Medicare physician payment system.
+                     <h3 class="section-subheading text-muted">The <a href="" data-toggle="modal" data-target="#medicare_chip"> Medicare Access and CHIP Reauthorization ACT (MACRA)</a>, signed into law in April 2015, 
+                     repealed the <a href="" data-toggle="modal" data-target="#sustainable_growth">Sustainable Growth Rate (SGR)</a> and instituted significant reforms to the Medicare physician payment system.
                      Starting with payments in 2019, providers must choose one of two payment pathways.</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 text-center section-body">
-                    <a href="#mips" class="page-scroll btn btn-xl"  style="background: #6e059f; border-style:none">MERIT-BASED INCENTIVE</br> PAYMENT SYSTEM (MIPS)</a>
+                    <a href="" data-toggle="modal" data-target="#mips" class="btn btn-xl"  style="background: #6e059f; border-style:none">MERIT-BASED INCENTIVE</br> PAYMENT SYSTEM (MIPS)</a>
                 </div>
              <div class="col-lg-6 text-center section-body">
-                    <a href="#payment" class="page-scroll btn btn-xl" style="background: #059f9d; border-style:none">ALTERNATIVE PAYMENT</br> MODELS (APMS)</a>
+                    <a href="" data-toggle="modal" data-target="#apms" class="btn btn-xl" style="background: #059f9d; border-style:none">ALTERNATIVE PAYMENT</br> MODELS (APMS)</a>
             </div>
             </div>
         </div>
@@ -156,99 +159,68 @@
             <div class="row">
                 <div class="col-lg-12 text-center section-body">
                     <h2 class="section-heading">what's at risk?</h2>
-                    <h3 class="section-subheading text-muted">The campaign consists of a series of three posters. SHM encourages hospitalists 
-                    and other hospitalist clinicians to display the posters in their hospitals to help promote the awareness 
-                    and dialogue about improving antibiotic prescribing. </h3>
-                </div>
-            </div>
-             <div class="row text-center section-body">
-                <div class="col-md-4 col-sm-6 campaign-item">
-                    <a href="#campaignModal1" class="campaign-link" data-toggle="modal">
-                        <!--<div class="campaign-hover">-->
-                        <!--    <div class="campaign-hover-content">-->
-                        <!--        <i class="fa fa-plus fa-3x"></i>-->
-                        <!--    </div>-->
-                        <!--</div>-->
-                        <img src="img/posters/poster-team.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="campaign-caption" style="">
-                        <h4 class="service-heading">Call in the Troops!</h4>
-                        <p class="text-muted">It Takes a Team. Identify opportunities to engage with all hospital-based clinicians to improve antibiotic stewardship in your hospital.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 campaign-item">
-                    <a href="#campaignModal2" class="campaign-link" data-toggle="modal">
-                        <!--<div class="campaign-hover">-->
-                        <!--    <div class="campaign-hover-content">-->
-                        <!--        <i class="fa fa-plus fa-3x"></i>-->
-                        <!--    </div>-->
-                        <!--</div>-->
-                        <img src="img/posters/poster-stop.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="campaign-caption">
-                        <h4 class="service-heading">Stop the Enemy. Don't Overprescribe.</h4>
-                        <p class="text-muted">Pay attention to appropriate antibiotic choice, resistance patterns and identify mechanisms to educate providers on overprescribing in your hospital. </p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 campaign-item">
-                    <a href="#campaignModal3" class="campaign-link" data-toggle="modal">
-                        <!--<div class="campaign-hover">-->
-                        <!--    <div class="campaign-hover-content">-->
-                        <!--        <i class="fa fa-plus fa-3x"></i>-->
-                        <!--    </div>-->
-                        <!--</div>-->
-                        <img src="img/posters/poster-time.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="campaign-caption">
-                        <h4 class="service-heading">Rethink Your Antibiotic Treatment Time Course.</h4>
-                        <p class="text-muted">Consider the Following: Adhere to Antibiotic Treatment Guidelines * Track the Day * Set a Stop Date * Re-evaluate Therapy * Streamline Therapy * Avoid Automatic Time Courses.</p>
-                    </div>
-                </div>
-            </div>
-             <div class="row">
-                <div class="col-lg-12 text-center section-body">
-                    <h3 class="section-subheading text-muted">SHM aims to facilitate culture change related to appropriate antibiotic prescribing. 
-                    The posters are designed to create high-impact reminders of what most hospitalists and hospitalist clinicians already know.</h3>
+                    <h3 class="section-subheading text-muted">The MIPS and APMS both required provider payments to be associated with performace- or
+                        value-based assessments. MIPS uses an array of metrics to adjust payments. whereas risk under alternative payment models depends
+                        on the model chosen.
+                    </h3>
+                    <img src="./img/table1.gif" class="img-responsive" alt="Cinque Terre" style="margin: 0 auto;" > 
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="mips" style="">
+    <section id="mymips" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center section-body">
                     <h2 class="section-heading">merit-based incentive payment system</h2>
-                     <h3 class="section-subheading text-muted">Eric Howell: "It’s time to change how we prescribe antibiotics in America’s hospitals, and you can help today."</h3>
-                    <a href = "http://www.medscape.com/viewarticle/853291"><img class="img-responsive img-centered" src ="img/eric-howell-video-thumb.jpg" style="height50%; width: 70%" /></a>                 
+                    <h3 class="section-subheading text-muted">The Merit-based Incentive Payment System (MIPS) adjusts payments, either up or down, based on a score of 1-100 assigned to a provider based on performance in four domains. 
+                    For the elements built from existing programs, such as PQRS, the physician value-based payment modifier, and Meaningful Use, hospitalists can expect similar policies in the MIPS. However, <a href="" data-toggle="modal" data-target="#cms">CMS</a> will be issuing the 
+                    foundational rules for the MIPS this year which will provide more detail and clarity to the program. Although the proportional weights of the domains can change, generally MIPS scoring will be based on a combination of 
+                    performance across these areas.</h3>
                     
-                    
-                    
-                    <!--<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wPEIWmTQexs"></iframe></div>-->
-                    <div class="campaign-caption" style="margin-top:35px">
-                        <h4 class="service-heading"><a href ="http://www.medscape.com/viewarticle/853291">View the video on Medscape !</a></h4>
-                        <p class="text-muted">In a new CDC Expert Commentary available on Medscape, SHM Senior Physician Advisor Eric Howell encourages all hospital-based staff to Fight the Resistance by working as a team, paying attention to appropriate antibiotic choice and rethinking antibiotic treatment time course. And, of course, to download the posters from this website and display them in their hospitals.</p>
-          <a name="webinars"></a>               
-   
-<!-- Kindred new video -->
-                     <hr style="margin-top:30px; magin-bottom:30px;">
-                    <div class="campaign-caption" style="margin-top:35px">
-                        <h4 class="service-heading">See how Kindred Hospital is helping to Fight the Resistance.</h4>           
-                   <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rJjAiVQwIag"></iframe></div>                           
-                      <hr style="margin-top:30px; magin-bottom:30px;">  
-                        
-                    </div>
-<!-- End Kindred new video --> 
-
-    <h3 style="padding-top:20px;" class="section-subheading text-muted">SHM’s Fight the Resistance Kickoff Webinar</h3>             
-                   <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8G0qNAjX3bA"></iframe></div>                           
-                        
-                        
-                    </div>
+                    <img class="img-responsive img-centered" src="img/piechart.png" alt="" style="">  
                 </div>
             </div>
         </div>
     </section>
+ <!--<section id="mymips" class="bg-light-gray">-->
+ <!--       <div class="container">-->
+ <!--           <div class="row">-->
+ <!--               <div class="col-lg-12 text-center section-body">-->
+ <!--                   <h2 class="section-heading">Alternative Payment Models</h2>-->
+                    <!--<h3 class="section-subheading text-muted">Marketing will provide the links and content that go here.</h3>-->
+ <!--               </div>-->
+ <!--           </div>-->
+ <!--           <div class="row">-->
+ <!--                <div class="col-lg-4  section-body" >-->
+ <!--                   <h4 class="service-heading">Antibiotic Stewardship related to Prescribing and Use</h4>-->
+ <!--                   <p style="font-size:11px;"><strong>Authors: Cynthia Korzelius, MD and Amit Desai, MD  </strong></p>-->
+ <!--                   <p>With the increased risk of complicated conditions such as C. difficile on the rise, hospitalists have an increasing responsibility to practice safer prescribing habits when it comes to antibiotics.  -->
+ <!--                   Practicing antibiotic stewardship is key to <strong>Fighting the Resistance!</strong></p>-->
+                    
+ <!--                   <p>This <a href = "/pdf/resources/CTR-15-0057_FTR_SAFE_PRESCRIBING_m1.pdf" onclick="ga('send', 'event', 'PDFs', 'Download', 'Practice Safe Prescribing Fact Sheet');">1-page, full color 8.5"x11" fact sheet</a> provides recommendations for promoting safe -->
+ <!--                   antibiotic prescribing as well as appropriate and necessary treatment recommendations for antibiotic use.</p>-->
+ <!--               </div>-->
+ <!--                <div class="col-lg-4  section-body"  style="text-align: left;">-->
+ <!--                    <h4 class="service-heading">Rethinking Antibiotic Treatment Time Course</h4>-->
+ <!--                    <p style="font-size:11px;"><strong>Authors: Kate Gibson, MD, Vandad Yousefi, MD and Suhel Patel, MD</strong></p>-->
+ <!--                    <p>Avoiding unnecessary antibiotic use and rethinking antibiotic treatment time courses can help decrease the eminent threat of drug-resistant bacteria.  -->
+ <!--                    Hospitalists and hospital clinicians must <strong>Fight the Resistance</strong> and work to improve treatment time courses in the hospital setting.</p>-->
+                    
+ <!--                   <p>This <a href = "/pdf/resources/Pages_from_CTR-15-0057_FTR_RETHINK_m1.pdf" onclick="ga('send', 'event', 'PDFs', 'Download', 'Rethink your Antibiotic Fact Sheet');">1-page, full color 8.5"x11" fact sheet</a> provides recommendations for avoiding unnecessary antibiotic use and rethinking your -->
+ <!--                   antibiotic treatment time course.</p>-->
+ <!--               </div>-->
+ <!--                <div class="col-lg-4  section-body"  style="text-align: left;">-->
+ <!--                    <h4 class="service-heading">Importance of Hospitalists working as members of a Multidisciplinary Team</h4>-->
+ <!--                    <p style="font-size:11px;"><strong>Author: Melhim Bou Alwan, MD</strong></p>-->
+ <!--                    <p>Engaging a multidisciplinary team of hospital clinicians to collaborate on an antimicrobial stewardship program is a -->
+ <!--                    key component to <strong>Fighting the Resistance!</strong></p>-->
+                    
+ <!--                   <p>This <a href = "/pdf/resources/Pages_from_CTR-15-0057_FTR_CHAMPION_m1.pdf" onclick="ga('send', 'event', 'PDFs', 'Download', 'Champion Antimicrobial Fact Sheet');">1-page, full color 8.5"x11" fact sheet</a> provides tips on how to successfully form a multidisciplinary antimicrobial stewardship team.</p>-->
+ <!--               </div>-->
+ <!--           </div>-->
+ <!--   </section>   -->
     <!--Additional Resources -->
     <section id="payment" class="bg-light-gray">
         <div class="container">
@@ -256,36 +228,32 @@
                 <div class="col-lg-12 text-center section-body">
                     <h2 class="section-heading">Alternative Payment Models</h2>
                     <!--<h3 class="section-subheading text-muted">Marketing will provide the links and content that go here.</h3>-->
+                    <p>Alternative Payment Models (APMs) is the other payment pathway providers can pursue. Participation in an approved APM would exempt providers 
+                    from participating in the MIPS and make them eligible for a 5% increase in Medicare payments. Set by MACRA, there are a set of requirements that 
+                    participating providers and APMs must meet in order to qualify for the MIPS exemption and APM incentive payment:</p>
                 </div>
             </div>
             <div class="row">
-                 <div class="col-lg-4  section-body" >
-                    <h4 class="service-heading">Antibiotic Stewardship related to Prescribing and Use</h4>
-                    <p style="font-size:11px;"><strong>Authors: Cynthia Korzelius, MD and Amit Desai, MD  </strong></p>
-                    <p>With the increased risk of complicated conditions such as C. difficile on the rise, hospitalists have an increasing responsibility to practice safer prescribing habits when it comes to antibiotics.  
-                    Practicing antibiotic stewardship is key to <strong>Fighting the Resistance!</strong></p>
+                <div class="col-lg-9 col-md-offset-2 section-body" >
+                    <ul class="section-list">
+                        <li><span>Providers must meet a threshold of Medicare payments, all-payer payments or patients associated with the APM (see chart below).</span></li>
+                        <li><span>Providers must bear more than nominal financial risk for losses under the model or be a patient centered medical home. The definition of this risk will be defined in rulemaking.</span></li>
+                        <li><span>The APM must require the use of certified EHR technology.</span></li>
+                        <li><span>The APM must use quality measures comparable to those in the MIPS.</span></li>
+                    </ul>
                     
-                    <p>This <a href = "/pdf/resources/CTR-15-0057_FTR_SAFE_PRESCRIBING_m1.pdf" onclick="ga('send', 'event', 'PDFs', 'Download', 'Practice Safe Prescribing Fact Sheet');">1-page, full color 8.5"x11" fact sheet</a> provides recommendations for promoting safe 
-                    antibiotic prescribing as well as appropriate and necessary treatment recommendations for antibiotic use.</p>
-                </div>
-                 <div class="col-lg-4  section-body"  style="text-align: left;">
-                     <h4 class="service-heading">Rethinking Antibiotic Treatment Time Course</h4>
-                     <p style="font-size:11px;"><strong>Authors: Kate Gibson, MD, Vandad Yousefi, MD and Suhel Patel, MD</strong></p>
-                     <p>Avoiding unnecessary antibiotic use and rethinking antibiotic treatment time courses can help decrease the eminent threat of drug-resistant bacteria.  
-                     Hospitalists and hospital clinicians must <strong>Fight the Resistance</strong> and work to improve treatment time courses in the hospital setting.</p>
-                    
-                    <p>This <a href = "/pdf/resources/Pages_from_CTR-15-0057_FTR_RETHINK_m1.pdf" onclick="ga('send', 'event', 'PDFs', 'Download', 'Rethink your Antibiotic Fact Sheet');">1-page, full color 8.5"x11" fact sheet</a> provides recommendations for avoiding unnecessary antibiotic use and rethinking your 
-                    antibiotic treatment time course.</p>
-                </div>
-                 <div class="col-lg-4  section-body"  style="text-align: left;">
-                     <h4 class="service-heading">Importance of Hospitalists working as members of a Multidisciplinary Team</h4>
-                     <p style="font-size:11px;"><strong>Author: Melhim Bou Alwan, MD</strong></p>
-                     <p>Engaging a multidisciplinary team of hospital clinicians to collaborate on an antimicrobial stewardship program is a 
-                     key component to <strong>Fighting the Resistance!</strong></p>
-                    
-                    <p>This <a href = "/pdf/resources/Pages_from_CTR-15-0057_FTR_CHAMPION_m1.pdf" onclick="ga('send', 'event', 'PDFs', 'Download', 'Champion Antimicrobial Fact Sheet');">1-page, full color 8.5"x11" fact sheet</a> provides tips on how to successfully form a multidisciplinary antimicrobial stewardship team.</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12 text-center section-body">
+                    <img src="./img/table2.gif" class="img-responsive" alt="Cinque Terre" style="margin: 0 auto;" > 
+                    <!--<h3 class="section-subheading text-muted">Marketing will provide the links and content that go here.</h3>-->
+                    <p style="margin-top:30px">Because the APM pathway is a new concept, much of the detail around the policies will be defined through upcoming rulemaking. Given what we know about existing APMs, SHM estimates it will be 
+                    <em><u>difficult</u></em> for many hospitalists to meet the threshold criteria and utilize this pathway in its current state. However, depending on how CMS develops the rules around APMs and what 
+                    new models emerge, this pathway may become a more viable option for hospitalists in the future.</p>
+                </div>
+            </div>
+        </div>
     </section>    
     
     <!--Case Study Submissions -->
@@ -349,74 +317,74 @@
         </div>
     </section>  
    <!--Events -->
-    <section id="events" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center section-body event" >
-                    <h2 class="section-heading">Events</h2>
-                    <h3 class="section-subheading text-muted" style="margin-bottom:30px;">SHM’s Fight the Resistance Antimicrobial Stewardship Campaign Kickoff Recorded 
-                    Webinar from November 10, 2015.</h3>
-                    <p>“Fight the Resistance” is a new behavior change campaign from the Society of Hospital Medicine 
-                    intended to encourage appropriate prescribing and use of antibiotics in the hospital. 
-                    View the Recorded Webinar</p>
-                    <button class='btn btn-primary' onclick="location.href='#webinars'">View the Recorded Webinar</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center section-body event" >
-                    <h3 class="section-subheading text-muted" style="margin-bottom:30px;">#FightTheResistance on Social Media</h3>
-                    <p>Thanks to all who participated in SHM’s #FightTheResistance photo contest and demonstrated such enthusiasm and support for the campaign. Congratulations to all winners! Each and every participant played a key role in spreading the word about improving antibiotic stewardship in America’s hospitals.</p>
-                    <p>Continue to follow <a href="https://www.twitter.com/SHMLive" target="_blank">@SHMLive</a>  on Twitter for updates on the “Fight the Resistance” campaign and news on how you can continue to make a difference. </p>
-                </div>
-            </div>
-        </div>
+    <!--<section id="events" class="bg-light-gray">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12 text-center section-body event" >-->
+    <!--                <h2 class="section-heading">Events</h2>-->
+    <!--                <h3 class="section-subheading text-muted" style="margin-bottom:30px;">SHM’s Fight the Resistance Antimicrobial Stewardship Campaign Kickoff Recorded -->
+    <!--                Webinar from November 10, 2015.</h3>-->
+    <!--                <p>“Fight the Resistance” is a new behavior change campaign from the Society of Hospital Medicine -->
+    <!--                intended to encourage appropriate prescribing and use of antibiotics in the hospital. -->
+    <!--                View the Recorded Webinar</p>-->
+    <!--                <button class='btn btn-primary' onclick="location.href='#webinars'">View the Recorded Webinar</button>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12 text-center section-body event" >-->
+    <!--                <h3 class="section-subheading text-muted" style="margin-bottom:30px;">#FightTheResistance on Social Media</h3>-->
+    <!--                <p>Thanks to all who participated in SHM’s #FightTheResistance photo contest and demonstrated such enthusiasm and support for the campaign. Congratulations to all winners! Each and every participant played a key role in spreading the word about improving antibiotic stewardship in America’s hospitals.</p>-->
+    <!--                <p>Continue to follow <a href="https://www.twitter.com/SHMLive" target="_blank">@SHMLive</a>  on Twitter for updates on the “Fight the Resistance” campaign and news on how you can continue to make a difference. </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
    
-    </section>    
+    <!--</section>    -->
     
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
+    <!--<section id="contact">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12 text-center">-->
+    <!--                <h2 class="section-heading">Contact Us</h2>-->
                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12">-->
+    <!--                <form name="sentMessage" id="contactForm" novalidate>-->
+    <!--                    <div class="row">-->
+    <!--                        <div class="col-md-6">-->
+    <!--                            <div class="form-group">-->
+    <!--                                <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">-->
+    <!--                                <p class="help-block text-danger"></p>-->
+    <!--                            </div>-->
+    <!--                            <div class="form-group">-->
+    <!--                                <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">-->
+    <!--                                <p class="help-block text-danger"></p>-->
+    <!--                            </div>-->
+    <!--                            <div class="form-group">-->
+    <!--                                <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">-->
+    <!--                                <p class="help-block text-danger"></p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-md-6">-->
+    <!--                            <div class="form-group">-->
+    <!--                                <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>-->
+    <!--                                <p class="help-block text-danger"></p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="clearfix"></div>-->
+    <!--                        <div class="col-lg-12 text-center">-->
+    <!--                            <div id="success"></div>-->
+    <!--                            <button type="submit" class="btn btn-xl">Send Message</button>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </form>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
 
     <footer>
         <div class="container">
@@ -444,79 +412,79 @@
     <!-- Use the modals below to showcase details downloads your campaign projects! -->
 
     <!-- campaign Modal 1 -->
-    <div class="campaign-modal modal fade" id="campaignModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
+<!--    <div class="campaign-modal modal fade" id="campaignModal1" tabindex="-1" role="dialog" aria-hidden="true">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="close-modal" data-dismiss="modal">-->
+<!--                <div class="lr">-->
+<!--                    <div class="rl">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-8 col-lg-offset-2">-->
+<!--                        <div class="modal-body">-->
                             <!-- Project Details Go Here -->
-                            <h2>call in the troops!</h2>
+<!--                            <h2>call in the troops!</h2>-->
                             
-                            <img class="img-responsive img-centered" src="img/posters/poster-team.jpg" alt="">
-                            <p>Overprescribing antibiotics leads to the emergence and spread of multi-drug resistant bacteria. Be aware of appropriate antibiotic choice, resistance patterns and resources available to educate providers on overprescribing in your hospital. </p>
-                            <p><strong>SIZES:</strong></p>
-                            <ul class="list-inline">
+<!--                            <img class="img-responsive img-centered" src="img/posters/poster-team.jpg" alt="">-->
+<!--                            <p>Overprescribing antibiotics leads to the emergence and spread of multi-drug resistant bacteria. Be aware of appropriate antibiotic choice, resistance patterns and resources available to educate providers on overprescribing in your hospital. </p>-->
+<!--                            <p><strong>SIZES:</strong></p>-->
+<!--                            <ul class="list-inline">-->
                                 <!--<li><a href="/test.pdf" download="expenses.pdf">8.5 x 11 (Color)</a>  |</li>-->
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_8.5x11_Color');" href="/pdf/team/CTR-15-0048_FTR_poster%20-TEAM%208.5x11_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_Color_poster_Troops&utm_campaign=FTR_15" download="team-8.5x11(color).pdf">8.5 x 11 (Color)</a>  |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_11x17_Color');"  href="/pdf/team/CTR-15-0048_FTR_poster%20-TEAM_11x17_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_Color_poster_Troops&utm_campaign=FTR_15" download="team-11x17(color).pdf">11 x 17 (Color) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_16x20_Color');"  href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_16x20_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_Color_poster_Troops&utm_campaign=FTR_15" download="team-16x20(color).pdf">16 x 20 (Color) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_8.5x11_Black_White');" href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_8.5x11_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_BW_poster_Troops&utm_campaign=FTR_15" download="team-8.5x11(black/white).pdf">8.5 x 11 (Black/White) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_11x17_Black_White');" href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_11x17_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_BW_poster_Troops&utm_campaign=FTR_15
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_8.5x11_Color');" href="/pdf/team/CTR-15-0048_FTR_poster%20-TEAM%208.5x11_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_Color_poster_Troops&utm_campaign=FTR_15" download="team-8.5x11(color).pdf">8.5 x 11 (Color)</a>  |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_11x17_Color');"  href="/pdf/team/CTR-15-0048_FTR_poster%20-TEAM_11x17_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_Color_poster_Troops&utm_campaign=FTR_15" download="team-11x17(color).pdf">11 x 17 (Color) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_16x20_Color');"  href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_16x20_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_Color_poster_Troops&utm_campaign=FTR_15" download="team-16x20(color).pdf">16 x 20 (Color) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_8.5x11_Black_White');" href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_8.5x11_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_BW_poster_Troops&utm_campaign=FTR_15" download="team-8.5x11(black/white).pdf">8.5 x 11 (Black/White) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_11x17_Black_White');" href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_11x17_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_BW_poster_Troops&utm_campaign=FTR_15-->
 
-" download="team-8.5x11(color).pdf">11 x 17 (Black/White) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_16x20_Black_White');" href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_16x20_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_BW_poster_Troops&utm_campaign=FTR_15" download="team-16x20(black/white).pdf">16 x 20 (Black/White) </a></li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--" download="team-8.5x11(color).pdf">11 x 17 (Black/White) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Call_Troops_16x20_Black_White');" href="/pdf/team/CTR-15-0048_FTR_TEAM_POSTER_16x20_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_BW_poster_Troops&utm_campaign=FTR_15" download="team-16x20(black/white).pdf">16 x 20 (Black/White) </a></li>-->
+<!--                            </ul>-->
+<!--                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <!-- campaign Modal 2 -->
-    <div class="campaign-modal modal fade" id="campaignModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
+<!--    <div class="campaign-modal modal fade" id="campaignModal2" tabindex="-1" role="dialog" aria-hidden="true">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="close-modal" data-dismiss="modal">-->
+<!--                <div class="lr">-->
+<!--                    <div class="rl">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-8 col-lg-offset-2">-->
+<!--                        <div class="modal-body">-->
                             <!-- Project Details Go Here -->
-                            <h2>stop the enemy. Don't overprescribe.</h2>
+<!--                            <h2>stop the enemy. Don't overprescribe.</h2>-->
                             
-                            <img class="img-responsive img-centered" src="img/posters/poster-stop.jpg" alt="">
-                            <p>Overprescribing antibiotics leads to the emergence and spread of multi-drug resistant bacteria. Be aware of appropriate antibiotic choice, resistance patterns and resources available to educate providers on overprescribing in your hospital.  </p>
-                            <p><strong>SIZES:</strong></p>
-                            <ul class="list-inline">
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_8.5x11_Color');" href="/pdf/stop/CTR-15-0048_FTR_poster%20-STOP_8.5x11_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_Color_poster_Enemy&utm_campaign=FTR_15
+<!--                            <img class="img-responsive img-centered" src="img/posters/poster-stop.jpg" alt="">-->
+<!--                            <p>Overprescribing antibiotics leads to the emergence and spread of multi-drug resistant bacteria. Be aware of appropriate antibiotic choice, resistance patterns and resources available to educate providers on overprescribing in your hospital.  </p>-->
+<!--                            <p><strong>SIZES:</strong></p>-->
+<!--                            <ul class="list-inline">-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_8.5x11_Color');" href="/pdf/stop/CTR-15-0048_FTR_poster%20-STOP_8.5x11_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_Color_poster_Enemy&utm_campaign=FTR_15-->
 
-" download="stop-8.5x11(Color).pdf">8.5 x 11 (Color)</a>  |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_11x17_Color');" href="/pdf/stop/CTR-15-0048_FTR_poster%20-STOP_11x17_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_Color_poster_Enemy&utm_campaign=FTR_15" download="stop-11x17(Color).pdf">11 x 17 (Color) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_16x20_Color');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_16x20_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_Color_poster_Enemy&utm_campaign=FTR_15" download="stop-16x20(Color).pdf">16 x 20 (Color) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_8.5x11_Black_White');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_8.5x11%20BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_BW_poster_Enemy&utm_campaign=FTR_15" download="stop-8.5x11(Black/White).pdf">8.5 x 11 (Black/White) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_11x17_Black_White');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_11x17_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_BW_poster_Enemy&utm_campaign=FTR_15" download="stop-11x17(Black/White).pdf">11 x 17 (Black/White) </a> |</li>
-                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_16x20_Black_White');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_16x20%20BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_BW_poster_Enemy&utm_campaign=FTR_15" download="stop-16x20(Black/White).pdf">16 x 20 (Black/White) </a></li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--" download="stop-8.5x11(Color).pdf">8.5 x 11 (Color)</a>  |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_11x17_Color');" href="/pdf/stop/CTR-15-0048_FTR_poster%20-STOP_11x17_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_Color_poster_Enemy&utm_campaign=FTR_15" download="stop-11x17(Color).pdf">11 x 17 (Color) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_16x20_Color');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_16x20_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_Color_poster_Enemy&utm_campaign=FTR_15" download="stop-16x20(Color).pdf">16 x 20 (Color) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_8.5x11_Black_White');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_8.5x11%20BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=8.5x11_BW_poster_Enemy&utm_campaign=FTR_15" download="stop-8.5x11(Black/White).pdf">8.5 x 11 (Black/White) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_11x17_Black_White');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_11x17_BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=11x17_BW_poster_Enemy&utm_campaign=FTR_15" download="stop-11x17(Black/White).pdf">11 x 17 (Black/White) </a> |</li>-->
+<!--                                <li><a onclick="ga('send', 'event', 'PDFs', 'Download', 'Stop_Enemy_16x20_Black_White');" href="/pdf/stop/CTR-15-0048_FTR_STOP_POSTER_16x20%20BW_m1.pdf?utm_source=FTR_web&utm_medium=web&utm_content=16x20_BW_poster_Enemy&utm_campaign=FTR_15" download="stop-16x20(Black/White).pdf">16 x 20 (Black/White) </a></li>-->
+<!--                            </ul>-->
+<!--                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <!-- campaign Modal 3 -->
     <div class="campaign-modal modal fade" id="campaignModal3" tabindex="-1" role="dialog" aria-hidden="true">
@@ -639,7 +607,7 @@
             </div>
         </div>
     </div>
-
+  
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -657,7 +625,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
-
+    
+    
 </body>
 
 </html>
