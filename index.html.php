@@ -107,7 +107,7 @@
                         <a class="page-scroll" href="#mymips">mips</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#payment">alternative payment models</a>
+                        <a class="page-scroll" href="#payment">APMs</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#cases">what can i do?</a>
@@ -124,9 +124,12 @@
         <div class="container" style="padding-top: 20%;">
             <div class="intro-text"id="header">
                 <!--<div class="intro-lead-in">Welcome to the Society Hospital Medicine's Fight the Resistance Campaign</div>-->
-                <div class="intro-heading" style="color:black; background-color:white">Medicare Physician Payments Are changing</div>
-                <div class="intro-lead-in" style="color:black">Learn how MACRA affects hospitalists and how to be prepare</div>
-                <a href="#basics" class="page-scroll btn btn-xl">Tell Me More</a>
+                <div class="heading-container" >
+                    <div class="intro-heading" style="color:black; ">Medicare Physician Payments Are changing</div>
+                    <div class="intro-lead-in" style="color:black">Learn how MACRA affects hospitalists and how to be prepare</div>
+                 </div>
+                    <a href="#basics" style="background-color:#059f9d;" class="page-scroll btn btn-xl">Tell Me More</a>
+               
             </div>
         </div>
     </header>
@@ -144,10 +147,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 text-center section-body">
-                    <a href="" data-toggle="modal" data-target="#mips" class="btn btn-xl"  style="background: #6e059f; border-style:none">MERIT-BASED INCENTIVE</br> PAYMENT SYSTEM (MIPS)</a>
+                    <a href="" data-toggle="modal" data-target="#mips" class="btn btn-xl basics-button"  style="background: #6e059f; ">MERIT-BASED INCENTIVE</br> PAYMENT SYSTEM (MIPS)</a>
                 </div>
              <div class="col-lg-6 text-center section-body">
-                    <a href="" data-toggle="modal" data-target="#apms" class="btn btn-xl" style="background: #059f9d; border-style:none">ALTERNATIVE PAYMENT</br> MODELS (APMS)</a>
+                    <a href="" data-toggle="modal" data-target="#apms" class="btn btn-xl basics-button" style="background: #059f9d;">ALTERNATIVE PAYMENT</br> MODELS (APMS)</a>
             </div>
             </div>
         </div>
@@ -163,7 +166,10 @@
                         value-based assessments. MIPS uses an array of metrics to adjust payments. whereas risk under alternative payment models depends
                         on the model chosen.
                     </h3>
-                    <img src="./img/table1.gif" class="img-responsive" alt="Cinque Terre" style="margin: 0 auto;" > 
+                    <img src="./img/table1.gif" class="img-responsive" alt="Cinque Terre" style="margin: 0 auto;" usemap="#Map2" border="0" />
+                    <map name="Map2">
+                      <area shape="rect" data-toggle="modal" data-target="#table1" coords="202,182,811,215" href="#">
+                    </map>
                 </div>
             </div>
         </div>
@@ -179,7 +185,14 @@
                     foundational rules for the MIPS this year which will provide more detail and clarity to the program. Although the proportional weights of the domains can change, generally MIPS scoring will be based on a combination of 
                     performance across these areas.</h3>
                     
-                    <img class="img-responsive img-centered" src="img/piechart.png" alt="" style="">  
+                    <img class="img-responsive img-centered" src="img/piechart.png" usemap="#Map" border="0" >  
+                    <map name="Map">
+                      <area shape="poly" data-toggle="modal" data-target="#quality" coords="5,0,197,1,203,129,126,170,114,254,1,287,2,1" href="">
+                      <area shape="poly" data-toggle="modal" data-target="#clinical_performance" coords="203,3,461,4,281,171,255,150,234,138,205,134,203,3" href="#ClinicalPractice">
+                      <area shape="poly" data-toggle="modal" data-target="#meaningful" coords="284,176,460,13,455,410,333,415,262,301,290,268,296,229,292,200,285,179" href="#MeaningfulUse">
+                      <area shape="poly" data-toggle="modal" data-target="#resource" coords="2,293,118,259,137,284,170,311,210,317,256,305,326,414,4,418,3,294" href="#ResourceUse">
+                    </map>
+                   
                 </div>
             </div>
         </div>
@@ -270,9 +283,9 @@
                     <div class="tabpanel styled-tabs uniform-height" role="tabpanel">
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs"  style="margin:auto" role="tablist" text-hidden-xs="true">
-                        <li role="presentation" class="active" style="width:33%; text-align:right;" class=""><a style="hieght:100%; width:100%; line-height:3em"aria-expanded="false" href="#tabs-tab1" aria-controls="tabs-tab1" role="tab" data-toggle="tab"><i class="icon fa fa-book fa-4x" style="color:#059f9d;"></i><h3 style="width:60%; float:right; margin-right: 20px;">Stay Informed</h3></a></li>
-                        <li class="" style="width:33%;  text-align:right;" role="presentation"><a style="hieght:100%; width:100%; height:6.5em" aria-expanded="false" href="#tabs-tab2" aria-controls="tabs-tab2" role="tab" data-toggle="tab"><i style="margin-right:30px;color:#059f9d;" class="icon fa fa-cogs fa-4x"></i><h3 style="width:20%; float:right; margin-right: 40px;">Prepare</h3></a></li>
-                        <li class="" style="width:33%; " role="presentation"><a style="hieght:100%; width:100%; line-height:3em" aria-expanded="false" href="#tabs-tab3" aria-controls="tabs-tab3" role="tab" data-toggle="tab"><i style="margin-left: 150px; color:#059f9d;"  class="icon fa fa-comments fa-4x"></i><h3 style="width:20%; float:right; margin-right: 40px;">Share</h3></a></li>
+                        <li role="presentation" class="active" style="width:33%; text-align:right;" class=""><a style="hieght:100%; width:100%; line-height:3em"aria-expanded="false" href="#tabs-tab1" aria-controls="tabs-tab1" role="tab" data-toggle="tab"><i style="margin-right:20%; color:#059f9d;" class="icon fa fa-book fa-4x hidden-sm hidden-md hidden-lg" ></i><!--<h3 style="width:60%; float:right; margin-right: 20px;">Stay Informed</h3>--><img class="img-responsive hidden-xs " src="img/btn1.png" alt="" style=""></a></li>
+                        <li class="" style="width:33%;  text-align:right;" role="presentation"><a style="hieght:100%; width:100%; height:6.5em" aria-expanded="false" href="#tabs-tab2" aria-controls="tabs-tab2" role="tab" data-toggle="tab"><i style="margin-right:20%; color:#059f9d;" class="icon fa fa-cogs fa-4x hidden-sm hidden-md hidden-lg"></i><!--<h3 style="width:20%; float:right; margin-right: 40px;">Prepare</h3>--><img class="img-responsive hidden-xs " src="img/btn2.png" alt="" style=""></a></li>
+                        <li class="" style="width:33%; " role="presentation"><a style="hieght:100%; width:100%; line-height:3em" aria-expanded="false" href="#tabs-tab3" aria-controls="tabs-tab3" role="tab" data-toggle="tab"><i style="margin-left:20%;color:#059f9d;"  class="icon fa fa-comments fa-4x hidden-sm hidden-md hidden-lg"></i><!--<h3 style="width:20%; float:right; margin-right: 40px;">Share</h3>--><img class="img-responsive hidden-xs " src="img/btn3.png" alt="" style=""></a></li>
                         <!--<li class="active" role="presentation"><a aria-expanded="true" href="#tabs-tab4" aria-controls="tabs-tab4" role="tab" data-toggle="tab"><i class="icon fa fa-comment"></i><span>Quisque</span></a></li>-->
                       </ul>
                       <!-- Tab panes -->
@@ -284,7 +297,7 @@
                             </br>
                             <p>Understanding the ins and outs of the policies will help hospitalists choose the best path forward for them and their groups. Much of the detail around the MIPS and APMs 
                                 will be determined through the regulatory rulemaking process later this year. Stay informed through the 
-                                <a href="http://www.hospitalmedicine.org/Web/Advocacy/Grassroots_Network/Web/Advocacy/Grassroots_Network_Healthcare_Advocacy_for_Hospitalists.aspx?hkey=b5cb792f-0361-4f48-845f-b74763833cce">Grassroots Network</a> 
+                                <a target="_blank" href="http://www.hospitalmedicine.org/Web/Advocacy/Grassroots_Network/Web/Advocacy/Grassroots_Network_Healthcare_Advocacy_for_Hospitalists.aspx?hkey=b5cb792f-0361-4f48-845f-b74763833cce">Grassroots Network</a> 
                                 and back here as policies develop for the most up-to-date information on MACRA.
                             </p>
                         </div>
@@ -306,8 +319,8 @@
                             <h4>Share Your Experiences</h4>
                             </br>
                             <p>By sharing your experiences with other hospitalists and with SHM, you can help your colleagues overcome reporting and performance issues and help SHM advocate 
-                               for better policies for hospitalists. Join the <a href="http://www.hospitalmedicine.org/Web/Advocacy/Grassroots_Network/Web/Advocacy/Grassroots_Network_Healthcare_Advocacy_for_Hospitalists.aspx?hkey=b5cb792f-0361-4f48-845f-b74763833cce">Grassroots Network</a> 
-                               to stay informed. Talk about your experiences on <a href="http://connect.hospitalmedicine.org/home">HMX</a> 
+                               for better policies for hospitalists. Join the <a target="_blank" href="http://www.hospitalmedicine.org/Web/Advocacy/Grassroots_Network/Web/Advocacy/Grassroots_Network_Healthcare_Advocacy_for_Hospitalists.aspx?hkey=b5cb792f-0361-4f48-845f-b74763833cce">Grassroots Network</a> 
+                               to stay informed. Talk about your experiences on <a target="_blank" href="http://connect.hospitalmedicine.org/home">HMX</a> 
                                or email <a href="mailto:advocacy@hospitalmedicine.org?subject=MACRA%20Information">SHM staff</a>.
                             </p>
                         </div>
@@ -625,6 +638,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+    <!-- SHM Custom Theme JavaScript -->
+    <script src="js/custom.js"></script>
     
     
 </body>

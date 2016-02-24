@@ -141,3 +141,64 @@ ul.section-list li:before {
 ul.section-list li span{
     padding-left:10px;
 }
+ul.section-list {
+    margin-bottom:120px;
+}
+/* adjusted menu width so it adjsuts to mobile menu on ipad */
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+/* Basics section buttons */
+.basics-button{
+    border-style:none;
+    margin-top:15px;
+}
+/* adjust header */
+#header{/* custom */
+    bottom:180px;
+    
+}
+.heading-container{
+    background-color:white;
+}
+.intro-lead-in{
+    padding-bottom:10px;
+}
+/* header button */
+#header-button{
+    background-color:#059f9d;
+}
