@@ -5,3 +5,7 @@ var areas = document.getElementsByTagName('area');
                                 e.preventDefault();
                             });
                         };
+
+$(document).ready(function() {
+    $('map').imageMapResize();
+});
