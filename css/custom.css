@@ -19,12 +19,15 @@ section:nth-child(even){
 .section-body h3, .section-body p{
     color: #505050;
     font-style: normal;
+    font-family: sans-serif;
    
 }
 
-.section-body p{
-    font-size:1.1em;
+.section-body p,#payment  li{
+    font-size:1.2em;
+    font-family: sans-serif;
 }
+
 
 .section-body h3.section-subheading{
     line-height:1.6em;
@@ -121,7 +124,7 @@ section list
 */
 
 ul.section-list li {
-    margin:15px 0 15px 0px;
+    margin:15px 0 0px 0px;
     list-style: none;
 }
 ul.section-list li:before {
@@ -188,10 +191,6 @@ ul.section-list {
     margin-top:15px;
 }
 /* adjust header */
-#header{/* custom */
-    bottom:180px;
-    
-}
 .heading-container{
     background-color:white;
 }
@@ -202,3 +201,8 @@ ul.section-list {
 #header-button{
     background-color:#059f9d;
 }
+
+/*#mymips .section-body p,#mymips .section-body li {*/
+/*    font-size: 1.2em;*/
+
+/*}*/
