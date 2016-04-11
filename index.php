@@ -137,9 +137,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center section-body">
                     <h2 class="section-heading">macra basics</h2>
-                     <h3 class="section-subheading text-muted">The <a href="" data-toggle="modal" data-target="#medicare_chip"> Medicare Access and CHIP Reauthorization ACT (MACRA)</a>, signed into law in April 2015, 
+                     <!-- class="section-subheading text-muted" for h3--><p  >The <a href="" data-toggle="modal" data-target="#medicare_chip"> Medicare Access and CHIP Reauthorization ACT (MACRA)</a>, signed into law in April 2015, 
                      repealed the <a href="" data-toggle="modal" data-target="#sustainable_growth">Sustainable Growth Rate (SGR)</a> and instituted significant reforms to the Medicare physician payment system.
-                     Starting with payments in 2019, providers must choose one of two payment pathways.</h3>
+                     Starting with payments in 2019, providers must choose one of two payment pathways.</p>
                 </div>
             </div>
             <div class="row">
@@ -159,10 +159,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center section-body">
                     <h2 class="section-heading">what's at risk?</h2>
-                    <h3 class="section-subheading text-muted">The MIPS and APMS both require provider payments to be associated with performace- or
+                  <!-- class="section-subheading text-muted"-->  <p >The MIPS and APMS both require provider payments to be associated with performace- or
                         value-based assessments. MIPS uses an array of metrics to adjust payments, whereas risk under alternative payment models depends
                         on the model chosen.
-                    </h3>
+                    </p>
                     <img src="./img/table1.gif" class="img-responsive" alt="Cinque Terre" style="margin: 0 auto;" usemap="#Map2" border="0" />
                     <map name="Map2">
                       <area shape="rect" data-toggle="modal" data-target="#table1" coords="202,182,811,215" href="#">
@@ -177,10 +177,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center section-body">
                     <h2 class="section-heading">merit-based incentive payment system</h2>
-                    <h3 class="section-subheading text-muted">The Merit-based Incentive Payment System (MIPS) adjusts payments, either up or down, based on a score of 1-100 assigned to a provider based on performance in four domains. 
+                  <!-- class="section-subheading text-muted"-->  <p >The Merit-based Incentive Payment System (MIPS) adjusts payments, either up or down, based on a score of 1-100 assigned to a provider based on performance in four domains. 
                     For the elements built from existing programs, such as PQRS, the physician value-based payment modifier, and Meaningful Use, hospitalists can expect similar policies in the MIPS. However, <a href="" data-toggle="modal" data-target="#cms">CMS</a> will be issuing the 
                     foundational rules for the MIPS this year which will provide more detail and clarity to the program. Although the proportional weights of the domains can change, generally MIPS scoring will be based on a combination of 
-                    performance across these areas.</h3>
+                    performance across these areas.</p>
                     <p style="margin-top:20px;font-size:1.4em;"><strong style="color:purple">Breakdown of the MIPS Categories</strong></p>
                     <img class="img-responsive img-centered" src="img/piechart.png" usemap="#Map" border="0" >  
                     <map name="Map">
@@ -406,7 +406,9 @@
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8">
                     <div class="pull-left">
-                         <h4 style="margin-top:30px"> &copy; 2016 Society of Hospital Medicine (SHM). All Rights Reserved.</h2>
+                         <h4 style="margin-top:30px" class="pull-left"> &copy; 2016 Society of Hospital Medicine (SHM). All Rights Reserved.</h4>
+                         <h4 style="margin-top:20px;" class="pull-left"> <i class="fa fa-twitter-square fa-2 aria-hidden=" true""=""></i> Follow us on Twitter <a href="https://twitter.com/shmadvocacy" style="color: rgb(60, 225, 223)">@SHMadvocacy</a></h4>
+                         <h4 style="margin-top:20px;" class="pull-left"> <i class="fa fa-envelope fa-2 aria-hidden=" true""=""></i> Email <a href="mailto:advocacy@hospitalmedicine.org?subject=MACRA%20Website" style="color: rgb(60, 225, 223)">SHM Advocacy</a> staff for questions or more information. </h4>
                     </div>
                 </div>
                 <!--<div class="col-lg-4 col-md-4 col-sm-4">-->
