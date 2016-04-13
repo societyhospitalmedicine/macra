@@ -163,9 +163,9 @@
                         value-based assessments. MIPS uses an array of metrics to adjust payments, whereas risk under alternative payment models depends
                         on the model chosen.
                     </p>
-                    <img src="./img/table1.gif" class="img-responsive" alt="Cinque Terre" style="margin: 0 auto;" usemap="#Map2" border="0" />
+                    <img src="./img/table1.gif" class="img-responsive" alt="Cinque Terre" style="margin: 0 auto;" usemap="#Map2" border="0" width=866 height=289/>
                     <map name="Map2">
-                      <area shape="rect" data-toggle="modal" data-target="#table1" coords="202,182,811,215" href="#">
+                        <area shape="rect" coords="170,272,717,299" data-toggle="modal" data-target="#table1" href="#"> 
                     </map>
                 </div>
             </div>
