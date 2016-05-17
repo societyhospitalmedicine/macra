@@ -655,7 +655,11 @@
 </script>   
 <!-- End Google Tracking -->
  
-    
+<script>
+ $(document).ready(function(){
+     $('#proposed_rule').modal('show')
+ })
+</script>
     
 </body>
 
