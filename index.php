@@ -181,15 +181,14 @@
                     For the elements built from existing programs, such as PQRS, the physician value-based payment modifier, and Meaningful Use, hospitalists can expect similar policies in the MIPS. However, <a href="" data-toggle="modal" data-target="#cms">CMS</a> will be issuing the 
                     foundational rules for the MIPS this year which will provide more detail and clarity to the program. Although the proportional weights of the domains can change, generally MIPS scoring will be based on a combination of 
                     performance across these areas.</p>
-                    <p style="margin-top:20px;font-size:1.4em;"><strong style="color:purple">Breakdown of the MIPS Categories</strong></p>
+                    <p style="margin-top:20px;font-size:1.4em;"><strong style="color:purple">Breakdown of the MIPS Categories for 2019 Payment</strong></p>
                     <img class="img-responsive img-centered" src="img/piechart.png" usemap="#Map" border="0" >  
                     <map name="Map">
-                      <area shape="poly" data-toggle="modal" data-target="#quality" coords="5,0,197,1,203,129,126,170,114,254,1,287,2,1" href="">
-                      <area shape="poly" data-toggle="modal" data-target="#clinical_performance" coords="203,3,461,4,281,171,255,150,234,138,205,134,203,3" href="#ClinicalPractice">
-                      <area shape="poly" data-toggle="modal" data-target="#meaningful" coords="284,176,460,13,455,410,333,415,262,301,290,268,296,229,292,200,285,179" href="#MeaningfulUse">
-                      <area shape="poly" data-toggle="modal" data-target="#resource" coords="2,293,118,259,137,284,170,311,210,317,256,305,326,414,4,418,3,294" href="#ResourceUse">
+                      <area shape="poly" data-toggle="modal" data-target="#quality" coords="253,4,456,3,457,414,373,412,259,412,255,133,250,5" href="">
+                      <area shape="poly" data-toggle="modal" data-target="#clinical_performance" coords="62,206,133,210,177,295,95,383,66,421,3,420,1,204" href="#ClinicalPractice">
+                      <area shape="poly" data-toggle="modal" data-target="#meaningful" coords="3,2,246,2,243,96,146,197,40,198,4,197,0,188,2,166,1,151" href="#MeaningfulUse">
+                      <area shape="poly" data-toggle="modal" data-target="#resource" coords="70,417,181,286,192,297,206,305,234,313,250,312,252,420,4,418,2,418" href="#ResourceUse">
                     </map>
-                   
                 </div>
             </div>
         </div>
