@@ -294,7 +294,8 @@
                             <p>Understanding the ins and outs of the policies will help hospitalists choose the best path forward for them and their groups. Much of the detail around the MIPS and APMs 
                                 will be determined through the <a href="http://www.hospitalmedicine.org/Web/Advocacy/Advocacy_Basics/Regulatory/Web/Advocacy/Regulatory.aspx?hkey=f09a4020-f15a-471e-9ddf-efd3557d7ee7">regulatory rulemaking process</a> later this year. Stay informed through the 
                                 <a target="_blank" href="http://www.hospitalmedicine.org/Web/Advocacy/Grassroots_Network/Web/Advocacy/Grassroots_Network_Healthcare_Advocacy_for_Hospitalists.aspx?hkey=b5cb792f-0361-4f48-845f-b74763833cce">Grassroots Network</a> 
-                                and check back here as policies develop for the most up-to-date information on MACRA.
+                                and check back here as policies develop for the most up-to-date information on MACRA. Read SHM’s comments on the <a href="pdfs/2016comments.pdf">proposed rule</a>.
+                                
                             </p>
                         </div>
     
