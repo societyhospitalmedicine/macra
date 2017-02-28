@@ -1,8 +1,7 @@
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px){
 	.top-pad{
 		height:97px;background:white;
 	}
-
 }
 #toggle-btn-1{
 	border-radius: 50%; width:80px; height: 80px; background: #3b4352;border-color: #3b4352; padding:18px;color:white;
@@ -21,22 +20,21 @@
 	background:#13171E;
 	font-weight:600;
 }
-
-.banner-btns {
+.banner-btns{
 	position:absolute;width:17%;height:10%;bottom:21%;color:white;font-size:1.5vw;background-color: #3b4352;border-color:#3b4352;border-radius:1vw;justify-content:center;display:flex;align-items:center
 }
 .banner-btns:hover{
 	background:#13171E;
 }
 /*buttons in first section*/
-.div-btns-red {
+.div-btns-red{
 	width:275px;padding:20px 30px;font-weight:600;background-color:#3b4352;color:white;border-radius:1.2vw;justify-content:center;display:flex;align-items:center;
 }
 .div-btns-red:hover{
 	background:#13171E;
 }
 /*buttuns in the merit section*/
-.div-btns-red-2 {
+.div-btns-red-2{
 	width:225px;height:70px;padding:20px 30px;font-weight:600;font-size:18px;color:white;border-radius:.4vw;justify-content:center;display:flex;align-items:center;
 }
 #Quality{
@@ -64,71 +62,60 @@
 	background:#13171E;
 }
 /*buttons in resource section*/
-.div-btns-red-3 {
+.div-btns-red-3{
 	width:200px;height:70px;font-weight:600;font-size:18px;color:white;background:#3b4352;border-radius:0vw;justify-content:center;display:flex;align-items:center;
 }
 .div-btns-red-3:hover{
 	background:#13171E;
 }
-
-.div-btns-red-dl {
+.div-btns-red-dl{
 	width:70px;height:70px;padding:10px;font-weight:600;font-size:18px;background-color:#c6c6c6;color:white;border-radius:0vw;justify-content:center;display:flex;align-items:center;
 }
-
-
-
-@font-face {
+@font-face{
 	font-family:"Intro-Inline";src:url("../css/Intro_Inline.eot?") format("eot"),url("../css/Intro_Inline.woff") format("woff"),url("../css/Intro_Inline.ttf") format("truetype"),url("../css/Intro_Inline.svg#Intro-Inline") format("svg");font-weight:normal;font-style:normal;
 }
 /*header fonts accross the site*/
-.Mfont {
+.Mfont{
 	font-family:Intro-Inline;
     font-size:75px;
 	font-weight:100;
 	color:teal;
-	border-bottom: 1px solid #000;
-	
+	border-bottom:1px solid #000;
 }
-
-.Mfont2 {
+.Mfont2{
 	font-family:Intro-Inline;
     font-size:100px;
 	font-weight:100;
 	color:dimgray;
-	border-bottom: 1px solid #000;
+	border-bottom:1px solid #000;
 }
-
-.close {
+.close{
 	display:none;
 }
-strong {
+strong{
 	color:#3b4352;
 }
-a { 
-	font-weight: 600;
+a{ 
+	font-weight:600;
 }
-
-a:link {	
+a:link{	
 	text-decoration:none;
-	color:#3b4352;
+	color:teal;
 	outline:none;
 	border:none;
 }
-
 a:visited{
-	color:#3b4352;
+	color:teal;
 	text-decoration:none;
 	outline:none;
 }
 a:hover{ 
-	color:teal;
+	color:#3b4352;
 }
 a:active{
 	text-decoration:none;
-	color:teal;
-	
+	color:#3b4352;
 }
-
 footer{
 	background:#2a292a;
 	height:225px;
@@ -137,23 +124,18 @@ footer{
 	display:flex;
 	align-items:center;
 }
-@media only screen and (max-width: 768px) {
-   .Mfont {
-      font-size: 40px;
+@media only screen and (max-width:768px){
+   .Mfont{
+      font-size:40px;
    }
 }
-@media only screen and (max-width: 768px) {
-   footer {
-      font-size: 10px;
+@media only screen and (max-width:768px){
+   footer{
+      font-size:10px;
    }
 }
-@media only screen and (max-width: 600px) {
-   .banner-btns {
+@media only screen and (max-width:600px){
+   .banner-btns{
       display:none;
    }
 }
-
-
-	
-
-
